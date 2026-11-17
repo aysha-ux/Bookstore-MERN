@@ -11,6 +11,8 @@ import AdminResource from './Admin/Pages/AdminResource'
 import AdminSettings from './Admin/Pages/AdminSettings'
 import { useState } from 'react'
 import Preloader from './Components/Preloader'
+import Header from './User/Components/Header'
+import Footer from './Components/Footer'
 
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
 
   return (
     <>
+          <Header/>
+
       <Routes>
         <Route path='/' element={isLoading?  <Preloader />: <Home />} />
         <Route path='/contact' element={<Contact />} />
@@ -38,6 +42,8 @@ function App() {
         <Route path='/admin/resources' element={<AdminResource />} />
         <Route path='/admin/settings' element={<AdminSettings />} />
       </Routes>
+                <Footer/>
+
     </>
   )
 }
