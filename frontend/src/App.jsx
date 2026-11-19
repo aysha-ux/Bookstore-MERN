@@ -12,37 +12,35 @@ import AdminSettings from './Admin/Pages/AdminSettings'
 import { useState } from 'react'
 import Preloader from './Components/Preloader'
 import Header from './User/Components/Header'
-import Footer from './Components/Footer'
+import Footer from './components/Footer'
 
 
 function App() {
 
-  const [isLoading,setLoading]=useState(true)
+  const [isLoading, setLoading] = useState(true)
 
-  setTimeout(()=>{
+  setTimeout(() => {
     setLoading(false)
 
-  },3000)
+  }, 3000)
 
   return (
     <>
-          <Header/>
+      <Header />
 
       <Routes>
-        <Route path='/' element={isLoading?  <Preloader />: <Home />} />
+        <Route path='/' element={isLoading ? <Preloader /> : <Home />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/contact' element={<Books />} />
+        <Route path='/books' element={<Books />} />
         <Route path='/login' element={<Auth />} />
-        <Route path='/register' element={<Auth />} />
-
+        <Route path='/register' element={<Auth insideRegister />} />  
         <Route path='/profile/:id' element={<Profile />} />
         <Route path='/books/:id' element={<View />} />
-
         <Route path='/admin' element={<AdminDashboard />} />
         <Route path='/admin/resources' element={<AdminResource />} />
         <Route path='/admin/settings' element={<AdminSettings />} />
       </Routes>
-                <Footer/>
+      <Footer/>
 
     </>
   )
