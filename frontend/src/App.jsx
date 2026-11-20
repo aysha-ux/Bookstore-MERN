@@ -12,7 +12,7 @@ import AdminSettings from './Admin/Pages/AdminSettings'
 import { useState } from 'react'
 import Preloader from './Components/Preloader'
 import Header from './User/Components/Header'
-import Footer from './components/Footer'
+import Footer from './Components/Footer'
 
 
 function App() {
