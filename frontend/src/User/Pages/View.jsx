@@ -1,8 +1,9 @@
-import React from 'react'
-import { FaBackward, FaEye } from 'react-icons/fa'
+import React, { useState } from 'react'
+import { FaBackward, FaCamera, FaEye } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 function View() {
+  const [modal, setModal] = useState(false)
   return (
     <>
       <div className='md:m-10 m-5'>
@@ -16,7 +17,7 @@ function View() {
             <div className='col-span-3'>
               <div className='flex justify-between'>
                 <h3 className='font-bold text-2xl'>Title</h3>
-                <button className='text-gray-400'><FaEye /></button>
+                <button onClick={()=>setModal(true)} className='text-gray-400'><FaEye /></button>
               </div>
               <h2 className='font-bold text-blue-700 mt-2'>Author</h2>
               <div className='md:grid grid-cols-3 gap-10 my-10'>
@@ -41,7 +42,28 @@ function View() {
           </div>
         </div>
         {/* Modal */}
-        
+        {modal &&
+          <div onClick={()=>setModal(false)} className='relative z-10 overflow-y-auto '>
+            <div className='bg-gray-500/75 fixed inset-0'>
+              <div className='flex justify-center items-center min-h-screen'>
+                <div className='bg-white rounded-2xl w-100 md:w-250'>
+                  {/* Modal title */}
+                  <div className='bg-black text-white p-3'>
+                    <h2>Book Images</h2>
+                  </div>
+                  {/* Modal body */}
+                  <div className='relative p-5'>
+                    <p className='flex items-center text-blue-500'> <FaCamera className='me-3' /> Camera clicks of the books</p>
+                    <div className='flex flex-wrap gap-5'>
+                      {/* Duplicate image */}
+                      <img className='md:w-75 w-25 md:me-2 mb:3 md:mt-0' src="https://m.media-amazon.com/images/I/81q77Q39nEL._SL1500_.jpg" alt='viewbook' />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
       </div>
     </>
 
@@ -49,16 +71,3 @@ function View() {
 }
 
 export default View
-
-{/* <div className='relative z-10 overflow-y-auto '>
-          <div className='bg-gray-500/75 fixed inset-0'>
-            <div className='flex justify-center items-center min-h-screen'>
-              <div className='bg-white rounded-2xl w-100 md:w-250'>
-                {/* Modal title */}
-        //         <div className='bg-black text-white p-3'>
-        //           <h2>Book Images</h2>
-        //         </div>
-        //       </div>
-        //     </div>
-        //   </div>
-        // </div> */}

@@ -23,7 +23,7 @@ function Home() {
 
         <div className="md:grid grid-cols-4 w-full my-10">
           <div className='shadow rounded p-3 m-4 md:my-0'>
-            <img width={'100%'} height={'200px'} src="https://www.colleenhoover.com/cdn/shop/files/ISWU_1200x1200_crop_center.jpg?v=1736793374" alt="book" />
+            <img width={'100%'} height={'200px'} src="https://m.media-amazon.com/images/I/81q77Q39nEL._SL1500_.jpg" alt="book" />
             <div className="flex flex-col justify-center items-center mt-4">
               <h2 className='text-blue-500 text-xl font-bold'>Author</h2>
               <h3 className='text-lg font-bold'>Title</h3>
@@ -48,7 +48,7 @@ function Home() {
           <p className='text-justify my-4'><span className='font-bold'>🎤 Interviews & Insights :</span> Exclusive interviews, behind-the-scenes stories, and writing tips that offer a deeper look into the author’s creative world.</p>
         </div>
         <div className='p-5'>
-          <img src="https://images.squarespace-cdn.com/content/v1/64bfd6aa127fba0754a78d65/1690617601186-7MS4W32UWBXKFKZTCQ14/authorphotos5-1024x683.jpg" alt="image" />
+          <img src="https://m.media-amazon.com/images/I/81q77Q39nEL._SL1500_.jpg" alt="image" />
         </div>
       </section>
       {/* testimonials */}
