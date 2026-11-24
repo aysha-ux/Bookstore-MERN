@@ -1,10 +1,14 @@
 import React from 'react'
 import { FaSearch } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import Header from '../Components/Header'
+import Footer from '../../Components/Footer'
 
 function Home() {
   return (
     <>
+                     <Header/>
+
       {/* hero section */}
       <div style={{height:'600px'}} className='flex flex-col justify-center items-center bg-[url(/landing.png)] bg-cover text-white'>
         <div style={{height:'600px',backgroundColor:'rgba(0,0,0,0.6)'}} className='w-full flex flex-col justify-center items-center'>
@@ -63,6 +67,8 @@ function Home() {
 
         
       </section>
+                           <Footer/>
+
     </>
   )
 }

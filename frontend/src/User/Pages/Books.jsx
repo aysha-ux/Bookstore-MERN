@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import Header from '../Components/Header'
+import Footer from '../../Components/Footer'
 
 function Books() {
   const [toggle,settoggle]=useState(false)
   return (
     <>
+                 <Header/>
       <div className='flex flex-col justify-center items-center my-5'>
       <h1 className='font-bold text-3xl my-5'>All Books</h1>
       <div>
@@ -47,6 +50,8 @@ function Books() {
           </div>
         </div>
       </div>
+                     <Footer/>
+
     </>
   )
 }

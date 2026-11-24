@@ -13,6 +13,7 @@ import { useState } from 'react'
 import Preloader from './Components/Preloader'
 import Header from './User/Components/Header'
 import Footer from './Components/Footer'
+import PageNotFound from './Pages/PageNotFound'
 
 
 function App() {
@@ -26,7 +27,6 @@ function App() {
 
   return (
     <>
-      <Header />
 
       <Routes>
         <Route path='/' element={isLoading ? <Preloader /> : <Home />} />
@@ -39,8 +39,9 @@ function App() {
         <Route path='/admin' element={<AdminDashboard />} />
         <Route path='/admin/resources' element={<AdminResource />} />
         <Route path='/admin/settings' element={<AdminSettings />} />
+                <Route path='/*' element={<PageNotFound />} />
+
       </Routes>
-      <Footer/>
 
     </>
   )

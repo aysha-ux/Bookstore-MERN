@@ -1,10 +1,14 @@
 import React from 'react'
 import { FaLocationPin } from 'react-icons/fa6'
 import { FaEnvelope, FaPaperPlane, FaPhone, FaTelegram } from 'react-icons/fa'
+import Header from '../Components/Header'
+import Footer from '../../Components/Footer'
 
 function Contact() {
   return (
     <>
+                     <Header/>
+
       <div className="md:px-20 my-5 p-5">
         <div className="text-center font-bold text-3xl my-5">Contact</div>
         <p className="text-justify">Have questions,feedback or need help finding the perfect book?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit consequuntur, numquam ipsa ipsum quam corporis! Nam, ipsam vitae. Tempore ipsum possimus molestiae porro ab. Doloremque, harum. Dignissimos eaque id laudantium!
@@ -62,6 +66,8 @@ function Contact() {
         </div>
         
       </div>
+                       <Footer/>
+
     </>
   )
 }

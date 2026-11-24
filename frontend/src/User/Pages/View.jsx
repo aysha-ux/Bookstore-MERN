@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
 import { FaBackward, FaCamera, FaEye } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import Footer from '../../Components/Footer'
+import Header from '../Components/Header'
 
 function View() {
   const [modal, setModal] = useState(false)
   return (
     <>
+      <Header />
+
       <div className='md:m-10 m-5'>
         <div className='border shadow border-gray-200 p-5'>
           {/* Grid */}
@@ -17,7 +21,7 @@ function View() {
             <div className='col-span-3'>
               <div className='flex justify-between'>
                 <h3 className='font-bold text-2xl'>Title</h3>
-                <button onClick={()=>setModal(true)} className='text-gray-400'><FaEye /></button>
+                <button onClick={() => setModal(true)} className='text-gray-400'><FaEye /></button>
               </div>
               <h2 className='font-bold text-blue-700 mt-2'>Author</h2>
               <div className='md:grid grid-cols-3 gap-10 my-10'>
@@ -43,7 +47,7 @@ function View() {
         </div>
         {/* Modal */}
         {modal &&
-          <div onClick={()=>setModal(false)} className='relative z-10 overflow-y-auto '>
+          <div onClick={() => setModal(false)} className='relative z-10 overflow-y-auto '>
             <div className='bg-gray-500/75 fixed inset-0'>
               <div className='flex justify-center items-center min-h-screen'>
                 <div className='bg-white rounded-2xl w-100 md:w-250'>
@@ -65,6 +69,8 @@ function View() {
           </div>
         }
       </div>
+      <Footer />
+
     </>
 
   )
