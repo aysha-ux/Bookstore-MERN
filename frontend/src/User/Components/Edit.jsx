@@ -2,15 +2,13 @@
 import React, { useState } from 'react'
 import { FaPen } from 'react-icons/fa'
 import { FaX } from 'react-icons/fa6'
-import Header from './Header'
-import Footer from '../../Components/Footer'
+
 
 function Edit() {
     const [offCanvas, setOffCanvas] = useState(false)
 
     return (
         <>
-            <Header />
 
             <div>
                 {/* Button */}
@@ -69,7 +67,6 @@ function Edit() {
                     </>
                 }
             </div>
-            <Footer />
 
         </>
     )
