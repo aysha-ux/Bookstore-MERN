@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FaEye, FaEyeSlash, FaUser } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import Header from '../User/Components/Header'
+import Footer from '../Components/Footer'
 
 function Auth({insideRegister}) {
 
@@ -76,6 +77,7 @@ function Auth({insideRegister}) {
           </div>
           </div>
       </div>
+       <Footer/>
    </>
   )
 }

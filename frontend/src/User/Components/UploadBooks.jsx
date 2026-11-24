@@ -1,12 +1,9 @@
 import React from 'react'
 import { FaPlus } from 'react-icons/fa'
-import Header from './Header'
-import Footer from '../../Components/Footer'
 
 function UploadBooks() {
     return (
         <>
-                 <Header/>
 
             <div className='bg-gray-200 p-10 my-10 mx-10'>
                 <h1 className='text-center text-3xl font-medium'>Upload Book Details</h1>
@@ -77,7 +74,6 @@ function UploadBooks() {
                     <button className='bg-blue-600 text-white px-3 py-2 rounded hover:bg-white hover:text-blue-600 ms-5'>ADD BOOK DETAILS</button>
                 </div>
             </div>
-                     <Footer/>
 
         </>
     )

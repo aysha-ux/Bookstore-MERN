@@ -1,11 +1,8 @@
 import React from 'react'
-import Header from './Header'
-import Footer from '../../Components/Footer'
 
 function PurchaseHistory() {
   return (
   <>
-           <Header/>
 
         <div className='p-30 my-15 shadow rounded'>
           {/* Duplicate book status */}
@@ -32,7 +29,6 @@ function PurchaseHistory() {
             </div>
           </div>
         </div>
-                 <Footer/>
 
   </>
   )

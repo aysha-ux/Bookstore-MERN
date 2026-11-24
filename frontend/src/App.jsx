@@ -11,8 +11,6 @@ import AdminResource from './Admin/Pages/AdminResource'
 import AdminSettings from './Admin/Pages/AdminSettings'
 import { useState } from 'react'
 import Preloader from './Components/Preloader'
-import Header from './User/Components/Header'
-import Footer from './Components/Footer'
 import PageNotFound from './Pages/PageNotFound'
 
 

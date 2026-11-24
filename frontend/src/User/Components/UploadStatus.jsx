@@ -1,11 +1,8 @@
 import React from 'react'
-import Header from './Header'
-import Footer from '../../Components/Footer'
 
 function UploadStatus() {
   return (
     <>
-             <Header/>
 
       <div className='p-30 my-15 shadow rounded'>
         {/* Duplicate book status */}
@@ -36,7 +33,6 @@ function UploadStatus() {
           </div>
         </div>
       </div>
-               <Footer/>
 
     </>
   )
